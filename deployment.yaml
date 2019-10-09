@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: portfolio-website-deployment
+spec:
+  selector:
+    matchLabels:
+      app: portfolio-website
+  template:
+    metadata:
+      labels:
+        app: portfolio-website
+    spec:
+      containers:
+        - name: portfolio-website-container
+          image: gcr.io/everyones-happy/portfolio-website
+          ports:
+            - containerPort: 80
+              protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio-website-service
+  labels:
+    app: portfolio-website
+spec:
+  selector:
+    app: portfolio-website
+  ports:
+    - port: 8080
+      targetPort: 80
+  type: NodePort
