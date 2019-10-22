@@ -1,0 +1,32 @@
+steps:
+  # This step builds the container image.
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Build
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/portfolio-website:$SHORT_SHA'
+      - '.'
+
+  # This step pushes the image to Container Registry
+  # The PROJECT_ID and SHORT_SHA variables are automatically
+  # replaced by Cloud Build.
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Push
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/portfolio-website:$SHORT_SHA'
+
+  # This step updates the image being used in GKE deployment
+  - name: 'gcr.io/cloud-builders/kubectl'
+    id: Update GKE deployment
+    args:
+      - 'set'
+      - 'image'
+      - 'deployment'
+      - 'portfolio-website-deployment'
+      - 'portfolio-website-container-container=gcr.io/everyones-happy/portfolio-website:$SHORT_SHA'
+      - '--record'
+    env:
+      - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=your-first-cluster-1'
