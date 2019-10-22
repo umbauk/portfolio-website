@@ -5,7 +5,11 @@
 
 body {
   font-family: arial;
-  text-align: center;
+  /*text-align: center;*/
+  color: rgb(177, 177, 177);
+  font-size: 16px;
+  height: 100%;
+  background-color: #121212;
 }
 
 * {
@@ -13,12 +17,30 @@ body {
   padding: 0;
 }
 
-nav ul {
-  text-align: right;
+.nav {
+  transition: top 0.5s ease;
+  background: #121212;
+  font-size: 1.5rem;
+  height: 5%;
+  padding: 0rem 2rem 2rem 2rem;
   position: fixed;
+  top: -10rem;
+  left: 7rem;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  z-index: 1;
+}
+
+.nav.expanded {
+  top: 0.3rem;
+}
+
+.nav ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -26,25 +48,104 @@ nav ul li {
 }
 
 nav ul li a {
-  padding-right: 30px;
-  color: white;
+  color: #03dac5;
   text-decoration: none;
-  font-size: 20;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-right: 2rem;
 }
 
 nav ul li a:hover {
-  color: #111;
+  opacity: 0.38;
+}
+
+.nav-toggle {
+  user-select: none;
+  cursor: pointer;
+  height: 2rem;
+  left: 2rem;
+  position: fixed;
+  top: 2rem;
+  width: 3.6rem;
+  z-index: 2;
+}
+
+.nav-toggle:hover {
+  opacity: 0.8;
+}
+
+.nav-toggle .nav-toggle-bar,
+.nav-toggle .nav-toggle-bar::after,
+.nav-toggle .nav-toggle-bar::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+  background: rgba(255, 255, 255, 0.87);
+  content: '';
+  height: 0.4rem;
+  width: 100%;
+}
+
+.nav-toggle .nav-toggle-bar {
+  margin-top: 0;
+}
+
+.nav-toggle .nav-toggle-bar::after {
+  margin-top: 0.8rem;
+}
+
+.nav-toggle .nav-toggle-bar::before {
+  margin-top: -0.8rem;
+}
+
+.nav-toggle.expanded .nav-toggle-bar {
+  background: transparent;
+}
+
+.nav-toggle.expanded .nav-toggle-bar::after,
+.nav-toggle.expanded .nav-toggle-bar::before {
+  background: rgba(255, 255, 255, 0.87);
+  margin-top: 0;
+}
+
+.nav-toggle.expanded .nav-toggle-bar::after {
+  transform: rotate(45deg);
+}
+
+.nav-toggle.expanded .nav-toggle-bar::before {
+  transform: rotate(-45deg);
+}
+
+.container {
+  text-align: center;
 }
 
 .welcome-section {
   top: 0;
-  height: 60vh;
-  background-color: #0aa;
+  height: 60%;
+  background-color: #121212;
   padding-top: 40vh;
+  display: inline-block;
+  margin: auto;
 }
+
+.about {
+  height: 100%;
+  background-color: #121212;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.about-box {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+}
+
 .projects {
   height: 100vh;
-  background-color: #48c9b0;
+  background-color: #121212;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 15vh 30vh 30vh;
@@ -57,6 +158,7 @@ nav ul li a:hover {
   padding-top: 20px;
   grid-gap: 40px;
 }
+
 .contact {
   height: 100vh;
   background-color: #0aa;
@@ -66,17 +168,26 @@ nav ul li a:hover {
 h1 {
   font-size: 70;
   font-family: Oswald;
-  color: #222;
+  color: #ffffff;
+  opacity: 0.87;
 }
 h3 {
   font-size: 40;
   font-family: Oswald;
-  color: #222;
+  color: #ffffff;
   text-decoration: none;
+  opacity: 0.87;
+}
+
+.hi {
+  color: #03dac5;
+  opacity: 0.8;
+  text-align: left;
 }
 
 .welcome-section p {
-  color: white;
+  color: #ffffff;
+  opacity: 0.6;
 }
 
 .project-tile {
@@ -84,7 +195,7 @@ h3 {
 }
 .project1 {
   grid-area: project1;
-  background-color: #f5b041;
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;

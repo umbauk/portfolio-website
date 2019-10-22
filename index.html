@@ -4,51 +4,74 @@
 </head>
 
 <header id="header">
-  <nav id="navbar">
+  <div class="nav-toggle">
+    <div class="nav-toggle-bar"></div>
+  </div>
+  <nav class="nav">
     <ul>
       <li><a href="#welcome-section">Home</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <div class="welcome-section" id="welcome-section">
-    <center>
+  <div class="container">
+    <div class="welcome-section" id="welcome-section">
+      <div class="hi">Hi, I'm</div>
       <h1>Darren Greenfield</h1>
-    </center>
-    <p>(HTML, CSS, JavaScript (MERN))</p>
+      <p>Full-stack web developer</p>
+    </div>
   </div>
 
-  <div id="projects" class="projects">
+  <div class="about" id="about">
+    <div class="about-box">
+      <h1>About</h1>
+      <br />
+      <p>
+        I am a full stack web developer with a high level of business acumen gained from my early
+        career in Consulting (Accenture) and Analytics (Google).
+      </p>
+      <br />
+      <p>
+        I love working hard to deliver quickly on complex problems, individually and as part of a
+        team. I want to learn new things and help build great products.
+      </p>
+      <br />
+    </div>
+  </div>
+
+  <div class="projects" id="projects">
     <h1 class="project-tile">Projects</h1>
     <div class="project1">
-      <a href="http://www.darrengreenfield.com/brick-game" target="_blank">
-        <h3>Brick Game</h3>
+      <a href="https://cafeandkids.com" target="_blank" rel="noopener noreferrer">
+        <h3>cafeandkids.com</h3>
       </a>
       <p>
-        The classic Brick game coded in vanilla JavaScript
+        An app to help parents find great playgrounds near great coffee shops. A single page,
+        front-end only app using HTMl, CSS, JavaScript and the React framework. Uses Google Maps API
+        and the OpenWeather API.
       </p>
     </div>
     <div class="project2">
-      <a href="http://www.darrengreenfield.com/play-and-coffee" target="_blank">
-        <h3>Play and Coffee</h3>
-      </a>
-      <p>
-        An app to help parents find great, relevant kids activities near great coffee shops. A
-        single page, front-end only app using HTMl, CSS, JavaScript and the React framework. Uses
-        Google Maps API and the OpenWeather API.
-      </p>
-    </div>
-    <div class="project3">
-      <a href="http://www.darrengreenfield.com/house-price-map" target="_blank">
+      <a href="https://housepricemap.ie" target="_blank" rel="noopener noreferrer">
         <h3>Dublin House Price Map</h3>
       </a>
       <p>
         120k+ historic Dublin property sales overlayed on an interactive map. A single page app
         using HTML, CSS, JavaScript and React on the front end and Node and MongoDB on the back end.
         Live for consumers at housepricemap.ie
+      </p>
+    </div>
+    <div class="project3">
+      <a href="http://www.darrengreenfield.com/brick-game" target="_blank">
+        <h3>Brick Game</h3>
+      </a>
+      <p>
+        The classic Brick game coded in vanilla JavaScript
       </p>
     </div>
     <div class="project4">
@@ -75,3 +98,25 @@
     </h3>
   </div>
 </main>
+
+<script>
+  (function() {
+    let hamburger = {
+      navToggle: document.querySelector('.nav-toggle'),
+      nav: document.querySelector('nav'),
+
+      doToggle: function(e) {
+        e.preventDefault();
+        this.navToggle.classList.toggle('expanded');
+        this.nav.classList.toggle('expanded');
+      },
+    };
+
+    hamburger.navToggle.addEventListener('click', function(e) {
+      hamburger.doToggle(e);
+    });
+    hamburger.nav.addEventListener('click', function(e) {
+      hamburger.doToggle(e);
+    });
+  })();
+</script>
