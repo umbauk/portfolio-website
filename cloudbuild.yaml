@@ -25,7 +25,7 @@ steps:
       - 'image'
       - 'deployment'
       - 'portfolio-website-deployment'
-      - 'portfolio-website-container-container=gcr.io/everyones-happy/portfolio-website:$SHORT_SHA'
+      - 'portfolio-website-container=gcr.io/everyones-happy/portfolio-website:$SHORT_SHA'
       - '--record'
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
