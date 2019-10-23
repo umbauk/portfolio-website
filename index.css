@@ -1,5 +1,4 @@
 #header {
-  position: fixed;
   top: 0;
 }
 
@@ -18,7 +17,7 @@ body {
 }
 
 .nav {
-  transition: top 0.5s ease;
+  /*transition: top 0.5s ease;*/
   background: #121212;
   font-size: 1.5rem;
   height: 5%;
@@ -30,8 +29,45 @@ body {
   z-index: 1;
 }
 
+.nav-item {
+  position: fixed;
+  top: -10rem;
+}
+
+#welcome-nav {
+  transition: top 0.5s ease;
+}
+
+#about-nav {
+  left: 7rem;
+  transition: top 0.7s ease;
+}
+
+#projects-nav {
+  left: 14rem;
+  transition: top 0.9s ease;
+}
+
+#blog-nav {
+  left: 22rem;
+  transition: top 1.1s ease;
+}
+
+#contact-nav {
+  left: 28rem;
+  transition: top 1.3s ease;
+}
+
+#welcome-nav.expanded,
+#about-nav.expanded,
+#projects-nav.expanded,
+#blog-nav.expanded,
+#contact-nav.expanded {
+  top: 0rem;
+}
+
 .nav.expanded {
-  top: 0.3rem;
+  top: 0rem;
 }
 
 .nav ul {
@@ -67,7 +103,7 @@ nav ul li a:hover {
   position: fixed;
   top: 2rem;
   width: 3.6rem;
-  z-index: 2;
+  z-index: 1;
 }
 
 .nav-toggle:hover {

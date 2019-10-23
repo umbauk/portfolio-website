@@ -9,11 +9,11 @@
   </div>
   <nav class="nav">
     <ul>
-      <li><a href="#welcome-section">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li id="welcome-nav" class="nav-item"><a href="#welcome-section">Home</a></li>
+      <li id="about-nav" class="nav-item"><a href="#about">About</a></li>
+      <li id="projects-nav" class="nav-item"><a href="#projects">Projects</a></li>
+      <li id="blog-nav" class="nav-item"><a href="#blog">Blog</a></li>
+      <li id="contact-nav" class="nav-item"><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -104,11 +104,20 @@
     let hamburger = {
       navToggle: document.querySelector('.nav-toggle'),
       nav: document.querySelector('nav'),
+      welcome: document.querySelector('#welcome-nav'),
+      about: document.querySelector('#about-nav'),
+      projects: document.querySelector('#projects-nav'),
+      blog: document.querySelector('#blog-nav'),
+      contact: document.querySelector('#contact-nav'),
 
       doToggle: function(e) {
-        e.preventDefault();
         this.navToggle.classList.toggle('expanded');
         this.nav.classList.toggle('expanded');
+        this.welcome.classList.toggle('expanded');
+        this.about.classList.toggle('expanded');
+        this.projects.classList.toggle('expanded');
+        this.blog.classList.toggle('expanded');
+        this.contact.classList.toggle('expanded');
       },
     };
 
