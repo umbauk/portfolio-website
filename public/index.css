@@ -5,7 +5,7 @@
 body {
   font-family: arial;
   color: rgb(177, 177, 177);
-  font-size: 16px;
+  font-size: 18px;
   height: 100%;
   background-color: #121212;
 }
@@ -189,19 +189,19 @@ nav ul li a:hover {
 }
 
 .projects {
-  height: 100vh;
+  height: 100%;
   background-color: #121212;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 15vh 30vh 30vh;
+  grid-template-rows: 10% 30% 30%;
   grid-template-areas:
     'header header'
     'project1 project2'
     'project3 project4';
-  padding-left: 20vw;
-  padding-right: 20vw;
-  padding-top: 20px;
-  grid-gap: 40px;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  grid-gap: 5%;
 }
 
 h1 {
@@ -209,6 +209,7 @@ h1 {
   font-family: Oswald;
   color: #ffffff;
   opacity: 0.87;
+  text-align: center;
 }
 
 h3 {
@@ -236,11 +237,54 @@ h3 {
 
 .project1 {
   grid-area: project1;
-  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background: #121212;
+  overflow: hidden;
 }
+
+.project1:hover::before {
+  opacity: 0.6;
+}
+
+.project1:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: url('cafeandkids.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.project-text {
+  background-color: rgb(82, 82, 82, 1);
+  width: 100%;
+  padding: 2%;
+  z-index: 5;
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+.project1:hover .project-text {
+  bottom: 0;
+  transition: all 0.5s ease;
+}
+
 .project2 {
   grid-area: project2;
   background-color: rgba(255, 255, 255, 0.1);
@@ -271,7 +315,7 @@ h3 {
 
 @media only screen and (max-width: 500px) {
   .projects {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
