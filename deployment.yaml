@@ -15,7 +15,7 @@ spec:
         - name: portfolio-website-container
           image: gcr.io/everyones-happy/portfolio-website
           ports:
-            - containerPort: 80
+            - containerPort: 443
               protocol: TCP
 
 ---
@@ -30,5 +30,5 @@ spec:
     app: portfolio-website
   ports:
     - port: 8080
-      targetPort: 80
+      targetPort: 443
   type: NodePort
