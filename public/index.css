@@ -31,7 +31,6 @@ h3 {
   font-size: 40;
   font-family: Oswald;
   color: #ffffff;
-  text-decoration: none;
   opacity: 0.87;
 }
 
@@ -223,8 +222,17 @@ nav ul li a:hover {
   padding: 0.5rem;
 }
 
+.skills-table #beginner {
+  padding-left: 0;
+  transform: translateX(-1rem);
+}
+
 .skills-table #expert {
   padding-left: 0;
+}
+
+.skills-table tbody td {
+  text-align: right;
 }
 
 .bar-chart {
@@ -249,7 +257,7 @@ nav ul li a:hover {
   width: 8rem;
 }
 #css {
-  width: 6rem;
+  width: 7rem;
 }
 
 #profile-pic {
@@ -273,6 +281,10 @@ nav ul li a:hover {
   grid-gap: 5%;
 }
 
+.projects a {
+  text-decoration: none;
+}
+
 .project-tile {
   grid-area: header;
 }
@@ -285,7 +297,7 @@ nav ul li a:hover {
   width: 100%;
   top: 100%;
   left: 0;
-  transform: translateY(-3rem);
+  transform: translateY(-3.5rem);
   transition: all 0.5s ease;
 }
 
