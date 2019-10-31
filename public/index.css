@@ -291,14 +291,21 @@ nav ul li a:hover {
 
 .project-text {
   background-color: rgb(58, 58, 58);
-  padding: 1%;
+  padding: 5%;
+  padding-top: 0%;
   z-index: 5;
   position: absolute;
-  width: 100%;
+  width: auto;
   top: 100%;
   left: 0;
   transform: translateY(-3.5rem);
   transition: all 0.5s ease;
+}
+
+.project-text a {
+  color: white;
+  text-decoration: underline;
+  opacity: 0.87;
 }
 
 .project-box {
@@ -343,7 +350,7 @@ nav ul li a:hover {
 }
 
 .project1:before {
-  background-image: url('cafeandkids.png');
+  background-image: url('images/cafeandkids.png');
 }
 
 .project2 {
@@ -351,7 +358,7 @@ nav ul li a:hover {
 }
 
 .project2:before {
-  background-image: url('cafeandkids.png');
+  background-image: url('images/housepricemap.png');
 }
 
 .project3 {
