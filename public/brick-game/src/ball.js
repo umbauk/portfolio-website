@@ -4,9 +4,9 @@ export default class ball {
   constructor(game) {
     this.radius = 7;
     this.startPositionX = 50 + this.radius;
-    this.startPositionY = 180 + this.radius;
-    this.startSpeedX = 2;
-    this.startSpeedY = 2;
+    this.startPositionY = game.gameHeight * 0.3 + this.radius;
+    this.startSpeedX = 3;
+    this.startSpeedY = 3;
     this.position = {
       x: this.startPositionX,
       y: this.startPositionY,
@@ -24,14 +24,7 @@ export default class ball {
   draw(context) {
     context.fillStyle = '#f057e3';
     context.beginPath();
-    context.arc(
-      this.position.x,
-      this.position.y,
-      this.radius,
-      0,
-      Math.PI * 2,
-      true,
-    );
+    context.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2, true);
     context.fill();
   }
 
@@ -40,10 +33,7 @@ export default class ball {
     this.position.y += this.speed.y;
 
     // Check if hitting side of canvas
-    if (
-      this.position.x - this.radius <= 0 ||
-      this.position.x > this.gameWidth - this.radius
-    ) {
+    if (this.position.x - this.radius <= 0 || this.position.x > this.gameWidth - this.radius) {
       this.speed.x = -this.speed.x;
     }
 

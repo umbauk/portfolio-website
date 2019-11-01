@@ -34,11 +34,11 @@ export default class Game {
   }
 
   start() {
-    if (this.currentGameState === GAMESTATE.MENU) {
+    if (this.currentGameState === GAMESTATE.MENU || this.currentGameState === GAMESTATE.GAMEOVER) {
       this.currentGameState = GAMESTATE.RUNNING;
       this.bricks = buildLevel(this, level1);
       this.gameObjects = [this.paddle, this.ball];
-      this.lives = 100;
+      this.lives = 3;
     }
   }
 
@@ -56,21 +56,9 @@ export default class Game {
       context.font = '30px Arial';
       context.fillStyle = 'white';
       context.textAlign = 'center';
-      context.fillText(
-        'Ready Player One',
-        this.gameWidth / 2,
-        this.gameHeight / 2 - 40,
-      );
-      context.fillText(
-        'Press <space> to START!',
-        this.gameWidth / 2,
-        this.gameHeight / 2,
-      );
-      context.fillText(
-        'Press <escape> to PAUSE.',
-        this.gameWidth / 2,
-        this.gameHeight / 2 + 40,
-      );
+      context.fillText('Ready Player One', this.gameWidth / 2, this.gameHeight / 2 - 40);
+      context.fillText('Press <space> to START!', this.gameWidth / 2, this.gameHeight / 2);
+      context.fillText('Press <escape> to PAUSE.', this.gameWidth / 2, this.gameHeight / 2 + 40);
     } else if (this.lives === 0) {
       this.currentGameState = GAMESTATE.GAMEOVER;
       context.fillStyle = 'rgba(0,0,0,1)';
@@ -78,22 +66,21 @@ export default class Game {
       context.font = '30px Arial';
       context.fillStyle = 'white';
       context.textAlign = 'center';
-      context.fillText('GAME OVER :(', this.gameWidth / 2, this.gameHeight / 2);
+      context.fillText('GAME OVER :(', this.gameWidth / 2, this.gameHeight / 2 - 40);
+      context.fillText(`Score: ${this.score}`, this.gameWidth / 2, this.gameHeight / 2);
       context.fillText(
-        `Score: ${this.score}`,
+        `Press <SPACE> to play again!`,
         this.gameWidth / 2,
         this.gameHeight / 2 + 40,
       );
     } else {
       context.textAlign = 'left';
-      context.fillStyle = 'black';
+      context.fillStyle = 'white';
       context.font = '20px Arial';
       context.fillText(`Lives: ${this.lives}`, this.gameWidth - 80, 30);
       context.fillText(`Score: ${this.score}`, 10, 30);
 
-      [...this.gameObjects, ...this.bricks].forEach(object =>
-        object.draw(context),
-      );
+      [...this.gameObjects, ...this.bricks].forEach(object => object.draw(context));
     }
   }
 
@@ -107,9 +94,7 @@ export default class Game {
       this.nextLevel();
     }
 
-    [...this.gameObjects, ...this.bricks].forEach(object =>
-      object.update(deltaTime),
-    );
+    [...this.gameObjects, ...this.bricks].forEach(object => object.update(deltaTime));
     this.bricks = this.bricks.filter(object => object.displayOnScreen);
   }
 

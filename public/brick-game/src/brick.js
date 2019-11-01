@@ -1,25 +1,28 @@
 import detectedCollision from './collisionDetection.js';
 
 export default class Brick {
-  constructor(game, position) {
-    this.position = position;
+  constructor(game, brickPosition) {
     this.width = 80;
     this.height = 20;
+    this.pixelsOffsetFromTop = game.gameHeight * 0.1;
+    this.position = {
+      x: brickPosition.x * this.width,
+      y: this.pixelsOffsetFromTop + brickPosition.y * this.height,
+    };
     this.game = game;
     this.displayOnScreen = true;
     this.color = this.getRandomColor();
+  }
+
+  static size() {
+    return { width: this.width, height: this.height };
   }
 
   draw(context) {
     context.fillStyle = this.color;
     context.fillRect(this.position.x, this.position.y, this.width, this.height);
     context.strokeStyle = '#696969';
-    context.strokeRect(
-      this.position.x,
-      this.position.y,
-      this.width,
-      this.height,
-    );
+    context.strokeRect(this.position.x, this.position.y, this.width, this.height);
   }
 
   update(deltaTime) {

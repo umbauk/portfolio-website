@@ -8,14 +8,17 @@ const GAME_HEIGHT = 600;
 let canvas = document.getElementById('gameScreen');
 let context = canvas.getContext('2d');
 
-let game = new Game(GAME_WIDTH, GAME_HEIGHT);
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let game = new Game(canvas.width, canvas.height);
 let lastTime = 0;
 
 function gameLoop(timestamp) {
   let deltaTime = timestamp - lastTime;
   lastTime = timestamp;
 
-  context.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+  context.clearRect(0, 0, canvas.width, canvas.height);
   game.update(deltaTime);
   game.draw(context);
 
