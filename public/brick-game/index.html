@@ -11,6 +11,29 @@
 
   <body>
     <canvas id="gameScreen"></canvas>
-    <script type="module" src="./src/index.js"></script>
+    <script type="module">
+      import Game from './src/game.js';
+
+      let canvas = document.getElementById('gameScreen');
+      let context = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let game = new Game(canvas.width, canvas.height);
+      let lastTime = 0;
+
+      function gameLoop(timestamp) {
+        let deltaTime = timestamp - lastTime;
+        lastTime = timestamp;
+
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        game.update(deltaTime);
+        game.draw(context);
+
+        requestAnimationFrame(gameLoop);
+      }
+
+      requestAnimationFrame(gameLoop);
+    </script>
   </body>
 </html>
