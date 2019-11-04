@@ -36,7 +36,7 @@ export default class Game {
   start() {
     if (this.currentGameState === GAMESTATE.MENU || this.currentGameState === GAMESTATE.GAMEOVER) {
       this.currentGameState = GAMESTATE.RUNNING;
-      this.bricks = buildLevel(this, level1);
+      this.bricks = buildLevel(this); //, level1);
       this.gameObjects = [this.paddle, this.ball];
       this.lives = 3;
     }

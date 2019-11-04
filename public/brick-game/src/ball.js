@@ -5,8 +5,8 @@ export default class ball {
     this.radius = 7;
     this.startPositionX = 50 + this.radius;
     this.startPositionY = game.gameHeight * 0.3 + this.radius;
-    this.startSpeedX = 3;
-    this.startSpeedY = 3;
+    this.startSpeedX = 5;
+    this.startSpeedY = 5;
     this.position = {
       x: this.startPositionX,
       y: this.startPositionY,
