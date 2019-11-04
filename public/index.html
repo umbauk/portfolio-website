@@ -32,9 +32,10 @@
   </div>
 
   <div class="about" id="about">
-    <img id="profile-pic" src="images/profile-pic.jpg" alt="A picture of me in black and white" />
+    <img id="profile-pic" src="images/profile-pic_small.jpg" alt="A picture of me in black and white" />
     <h1>About</h1>
     <br />
+    <div class="about-box-bg">
     <div class="about-box">
       <p>
         I am a full stack web developer with a high level of business acumen gained from my early
@@ -100,6 +101,7 @@
         </table>
       </p>
     </div>
+    </div>
   </div>
 
   <div class="projects" id="projects">
@@ -141,10 +143,10 @@
         </a>
         <br />
         <p>
-          The classic Breakout clone game coded in vanilla JavaScript
+          The classic Breakout clone game coded in vanilla JavaScript using object-oriented methodology.
         </p>
         <br />
-        <p><a href='https://github.com/umbauk/brick-game/' target="_blank" rel="noopener noreferrer">Source code</a></p>
+        <p><a href='https://github.com/umbauk/portfolio-website/tree/master/public/brick-game' target="_blank" rel="noopener noreferrer">Source code</a></p>
       </div>
     </div>
     <div class="project4 project-box">
@@ -154,7 +156,7 @@
         </a>
         <br />
         <p>
-          A vanilla JavaScript calculator
+          A calculator coded in vanilla javascript.
         </p>
         <br />
         <p><a href='https://github.com/umbauk/house-price-map/' target="_blank" rel="noopener noreferrer">Source code</a></p>
@@ -163,7 +165,9 @@
   </div>
 
 <div class="blog" id="blog">
-  <h1 class="project-tile">Blog</h1>
+  <h1>Blog</h1>
+  <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@darren.g" data-maxcols="3" data-layout="grid" data-poststyle="inline"
+    data-readmore="Read the rest" data-buttonclass="btn btn-primary" data-offset="-100"></div>
 </div>
 
   <div class="contact" id="contact">
@@ -211,4 +215,22 @@
       hamburger.doToggle(e);
     });
   })();
+  (function () {
+
+      var parallax = document.querySelectorAll("body"),
+        speed = 0.05;
+
+      window.onscroll = function () {
+        [].slice.call(parallax).forEach(function (el, i) {
+
+          var windowYOffset = window.pageYOffset,
+            elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+          el.style.backgroundPosition = elBackgrounPos;
+
+        });
+      };
+
+    })();
 </script>
+<script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>

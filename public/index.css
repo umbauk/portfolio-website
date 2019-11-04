@@ -12,6 +12,11 @@ body {
   color: rgb(177, 177, 177);
   height: 100%;
   background-color: #121212;
+  background-image: url('images/background.jpg');
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * {
@@ -181,8 +186,8 @@ nav ul li a:hover {
 
 .welcome-section {
   top: 0;
-  height: 60%;
-  background-color: #121212;
+  height: 100%;
+  background-color: rgba(18,18,18,0.1);
   padding-top: 40vh;
   display: inline-block;
   margin: auto;
@@ -200,13 +205,19 @@ nav ul li a:hover {
 }
 
 .about {
-  background-color: #121212;
+  background-color: rgba(18,18,18,0.1);;
   padding-top: 20px;
   text-align: center;
 }
 
-.about-box {
+.about-box-bg {
   width: 60%;
+  background-color: rgba(18, 18, 18, 1);
+  display: inline-block;
+}
+
+.about-box {
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.04);
   display: inline-block;
   font-size: 1.2rem;
@@ -267,7 +278,7 @@ nav ul li a:hover {
 
 .projects {
   height: 100%;
-  background-color: #121212;
+  background-color: rgba(18,18,18,0.1);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 30% 30%;
@@ -350,7 +361,7 @@ nav ul li a:hover {
 }
 
 .project1:before {
-  background-image: url('images/cafeandkids.png');
+  background-image: url('images/cafeandkids.jpg');
 }
 
 .project2 {
@@ -358,7 +369,7 @@ nav ul li a:hover {
 }
 
 .project2:before {
-  background-image: url('images/housepricemap.png');
+  background-image: url('images/housepricemap.jpg');
 }
 
 .project3 {
@@ -366,7 +377,7 @@ nav ul li a:hover {
 }
 
 .project3:before {
-  background-image: url('cafeandkids.png');
+  background-image: url('images/breakout-clone.png');
 }
 
 .project4 {
@@ -379,11 +390,16 @@ nav ul li a:hover {
 
 .blog {
   height: 100%;
-  background-color: #121212;
+  background-color: rgba(18,18,18,0.1);
   padding-left: 15%;
   padding-right: 15%;
   padding-top: 5%;
   grid-gap: 5%;
+}
+
+.blog a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .contact {
@@ -393,6 +409,12 @@ nav ul li a:hover {
 }
 
 @media only screen and (max-width: 500px) {
+  .projects {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @media only screen and (max-height: 500px) {
   .projects {
     padding-left: 5%;
     padding-right: 5%;
