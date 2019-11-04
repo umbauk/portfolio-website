@@ -187,7 +187,7 @@ nav ul li a:hover {
 .welcome-section {
   top: 0;
   height: 100%;
-  background-color: rgba(18,18,18,0.1);
+  background-color: rgba(18, 18, 18, 0.1);
   padding-top: 40vh;
   display: inline-block;
   margin: auto;
@@ -205,7 +205,7 @@ nav ul li a:hover {
 }
 
 .about {
-  background-color: rgba(18,18,18,0.1);;
+  background-color: rgba(18, 18, 18, 0.1);
   padding-top: 20px;
   text-align: center;
 }
@@ -278,7 +278,7 @@ nav ul li a:hover {
 
 .projects {
   height: 100%;
-  background-color: rgba(18,18,18,0.1);
+  background-color: rgba(18, 18, 18, 0.1);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 10% 30% 30%;
@@ -390,7 +390,7 @@ nav ul li a:hover {
 
 .blog {
   height: 100%;
-  background-color: rgba(18,18,18,0.1);
+  background-color: rgba(18, 18, 18, 0.1);
   padding-left: 15%;
   padding-right: 15%;
   padding-top: 5%;
@@ -413,8 +413,9 @@ nav ul li a:hover {
     padding-left: 5%;
     padding-right: 5%;
   }
+}
 
-  @media only screen and (max-height: 500px) {
+@media only screen and (max-height: 500px) {
   .projects {
     padding-left: 5%;
     padding-right: 5%;
