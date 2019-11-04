@@ -15,6 +15,7 @@ body {
   background-image: url('images/background.jpg');
 
   background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -207,6 +208,7 @@ nav ul li a:hover {
 .about {
   background-color: rgba(18, 18, 18, 0.1);
   padding-top: 20px;
+  padding-bottom: 200px;
   text-align: center;
 }
 
@@ -281,7 +283,7 @@ nav ul li a:hover {
   background-color: rgba(18, 18, 18, 0.1);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 10% 30% 30%;
+  grid-template-rows: 10% 300px 300px;
   grid-template-areas:
     'header header'
     'project1 project2'
@@ -385,7 +387,7 @@ nav ul li a:hover {
 }
 
 .project4:before {
-  background-image: url('cafeandkids.png');
+  background-image: url('images/calculator.png');
 }
 
 .blog {
@@ -409,13 +411,6 @@ nav ul li a:hover {
 }
 
 @media only screen and (max-width: 500px) {
-  .projects {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-}
-
-@media only screen and (max-height: 500px) {
   .projects {
     padding-left: 5%;
     padding-right: 5%;
