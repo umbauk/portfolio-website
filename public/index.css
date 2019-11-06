@@ -34,7 +34,7 @@ h1 {
 }
 
 h3 {
-  font-size: 40;
+  font-size: 2.2rem;
   font-family: Oswald;
   color: #ffffff;
   opacity: 0.87;
@@ -255,27 +255,28 @@ nav ul li a:hover {
 }
 
 #javascript {
-  width: 10rem;
-}
-#react {
-  width: 7rem;
-}
-#node {
-  width: 7rem;
-}
-#mongodb {
-  width: 6rem;
-}
-#html {
   width: 8rem;
 }
-#css {
+#react {
+  width: 6rem;
+}
+#node {
+  width: 6rem;
+}
+#mongodb {
+  width: 5rem;
+}
+#html {
   width: 7rem;
+}
+#css {
+  width: 6rem;
 }
 
 #profile-pic {
-  height: 15rem;
-  width: 15rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
 }
 
 .projects {
@@ -290,7 +291,7 @@ nav ul li a:hover {
     'project3 project4';
   padding-left: 15%;
   padding-right: 15%;
-  padding-top: 5%;
+  padding-margin: 5%;
   grid-gap: 5%;
 }
 
@@ -395,9 +396,9 @@ nav ul li a:hover {
   background-color: rgba(18, 18, 18, 0.1);
   padding-left: 15%;
   padding-right: 15%;
-  padding-top: 10rem;
   padding-bottom: 10rem;
   grid-gap: 5%;
+  margin-top: 10rem;
 }
 
 .blog a {
@@ -417,6 +418,26 @@ nav ul li a:hover {
   height: 100vh;
   padding-top: 20px;
   text-align: center;
+}
+
+.contact a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+}
+
+.contact #github-logo {
+  height: 3rem;
+  transform: translateY(0.6rem);
+}
+
+.contact #stack-overflow-logo {
+  height: 2.5rem;
+  transform: translateY(0.4rem);
+}
+
+.contact #email-logo {
+  height: 2.5rem;
+  transform: translateY(0.6rem);
 }
 
 @media only screen and (max-width: 500px) {
