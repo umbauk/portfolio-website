@@ -3,17 +3,19 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149922420-3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-149922420-3');
   </script>
   <link rel="stylesheet" type="text/css" href="index.css" />
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+  <link rel="manifest" href="favicons/site.webmanifest" />
 </head>
 
 <header id="header">
@@ -24,7 +26,7 @@
     <ul>
       <li id="welcome-nav" class="nav-item"><a href="#welcome-section">Home</a></li>
       <li id="about-nav" class="nav-item"><a href="#about">About</a></li>
-      <li id="projects-nav" class="nav-item"><a href="#projects">Projects</a></li>
+      <li id="projects-nav" class="nav-item"><a href="#projects">Portfolio</a></li>
       <li id="blog-nav" class="nav-item"><a href="#blog">Blog</a></li>
       <li id="contact-nav" class="nav-item"><a href="#contact">Contact</a></li>
     </ul>
@@ -32,177 +34,112 @@
 </header>
 
 <main>
-  <div class="container">
-    <div class="welcome-section" id="welcome-section">
-      <div class="hi">Hi, I'm</div>
-      <h1>Darren Greenfield</h1>
-      <p>Full-stack web developer</p>
+  <div class="flex-grid" id="welcome-section">
+    <div class="col">
+      <div id="subtitle">Hi 👋</div>
+      <h1>Looking for a developer to join your start-up?</h1>
+      <div id="subtitle">You may be in the right place</div>
     </div>
   </div>
 
-  <div class="about" id="about">
-    <img id="profile-pic" src="images/profile-pic_small.jpg" alt="A picture of me in black and white" />
-    <h1>About</h1>
-    <br />
-    <div class="about-box-bg">
-    <div class="about-box">
+  <div class="flex-grid" id="intro">
+    <div class="col">
       <p>
-        I am a full stack web developer with a high level of business acumen gained from my early
-        career in Consulting (Accenture) and Analytics (Google).
+        You’ve probably arrived here because
+        <b>you’re looking to hire someone for your start-up</b>. Your dream is to find someone who
+        will take your startup as seriously as you do, will act like an owner, like it’s their
+        startup too. You want a self-starter who learns quickly and will become one of the team
+        almost immediately.
       </p>
-      <br />
       <p>
-        I love working hard to deliver quickly on complex problems, individually and as part of a
-        team.
+        Picking the right person to join your team is hard and when it’s a small team with a high
+        performance bar and limited time and resources,
+        <b>it’s critical you find the right person</b>. So let me try to make it easy for you :)
       </p>
-      <br />
-      <p>
-        I am based in Palo Alto, CA.
-      </p>
-      <br />
-      <p>
-        I have experience with:
-        <table class="skills-table">
-          <thead>
-            <tr>
-              <td></td>
-              <td id="beginner">Beginner</td>
-              <td id="expert">Expert</td>
-            </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>JavaScript</td>
-            <td><div class="bar-chart" id="javascript"></div></td>
-          </tr>
-          <tr>
-            <td>React</td>
-            <td>
-              <div class="bar-chart" id="react"></div>
-            </td>
-          </tr>
-          <tr>
-            <td>Node</td>
-            <td>
-              <div class="bar-chart" id="node"></div>
-            </td>
-          </tr>
-          <tr>
-            <td>MongoDB / Mongoose</td>
-            <td>
-              <div class="bar-chart" id="mongodb"></div>
-            </td>
-          </tr>
-          <tr>
-            <td>HTML</td>
-            <td>
-              <div class="bar-chart" id="html"></div>
-            </td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>
-              <div class="bar-chart" id="css"></div>
-            </td>
-          </tr>
-        </tbody>
-        </table>
-      </p>
-    </div>
     </div>
   </div>
 
-  <div class="projects" id="projects">
-    <h1 class="project-tile">Projects</h1>
-    <div class="project1 project-box">
-      <div class="project-text">
-        <a href="https://cafeandkids.com" target="_blank" rel="noopener noreferrer">
-          <h3>cafeandkids.com</h3>
-        </a>
-        <br />
-        <p>
-          An app to help parents find great playgrounds near great coffee shops. A single page,
-          front-end only app using HTML, CSS, JavaScript and React. Uses Google Maps API and the
-          OpenWeather API. Live for users at cafeandkids.com
-        </p>
-        <br/>
-        <p><a href='https://github.com/umbauk/cafe-and-kids/' target="_blank" rel="noopener noreferrer">Source code</a></p>
-      </div>
-    </div>
-    <div class="project2 project-box">
-      <div class="project-text">
-        <a href="https://housepricemap.ie" target="_blank" rel="noopener noreferrer">
-          <h3>housepricemap.ie</h3>
-        </a>
-        <br />
-        <p>
-          120k+ historic Dublin property sales overlayed on an interactive map. A single page app
-          using HTML, CSS, JavaScript and React on the front end and NodeJS, Mongoose and MongoDB on
-          the back end. Live for users at housepricemap.ie
-        </p>
-        <br />
-        <p><a href='https://github.com/umbauk/house-price-map/' target="_blank" rel="noopener noreferrer">Source code</a></p>
-      </div>
-    </div>
-    <div class="project3 project-box">
-      <div class="project-text">
-        <a href="brick-game/index.html" target="_blank" rel="noopener noreferrer">
-          <h3>Breakout Clone Game</h3>
-        </a>
-        <br />
-        <p>
-          The classic Breakout clone game coded in vanilla JavaScript using object-oriented methodology.
-        </p>
-        <br />
-        <p><a href='https://github.com/umbauk/portfolio-website/tree/master/public/brick-game' target="_blank" rel="noopener noreferrer">Source code</a></p>
-      </div>
-    </div>
-    <div class="project4 project-box">
-      <div class="project-text">
-        <a href="calculator/index.html" target="_blank" rel="noopener noreferrer">
-          <h3>JS Calculator</h3>
-        </a>
-        <br />
-        <p>
-          A calculator coded in vanilla javascript. It's simple, but it can display the meaning of life...
-        </p>
-        <br />
-        <p><a href='https://github.com/umbauk/portfolio-website/tree/master/public/calculator' target="_blank" rel="noopener noreferrer">Source code</a></p>
-      </div>
+  <div class="flex-grid" id="right-place-title">
+    <div class="col">
+      <h3>You're in the right place if you're looking for:</h3>
     </div>
   </div>
-
-<div class="blog" id="blog">
-  <h1 id='blog-title'>Blog</h1>
-  <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@darren.g" data-maxcols="3" data-layout="grid" data-poststyle="inline"
-    data-readmore="Read the rest" data-buttonclass="btn btn-primary" data-offset="-100"></div>
-</div>
-
-  <div class="contact" id="contact">
-    <h1>Contact</h1>
-    <br /><br />
-    <h3>
-      <a href="https://github.com/umbauk" target="_blank" id="profile-link">
-        <img id="github-logo" src="images/github-logo.png" alt="GitHub logo" />GitHub
-      </a>
-    </h3>
-    <br /><br />
-    <h3>
-      <!-- <a href="https://www.linkedin.com/in/darrengreenfield/" target="_blank">LinkedIn</a> -->
-    </h3>
-    <h3>
-      <a href="https://stackoverflow.com/users/10302934/darren-g" target="_blank" rel="noopener noreferrer">
-        <img id="stack-overflow-logo" src="images/stack-overflow-logo_small.png" alt="Stack Overflow logo" />
-        Stack Overflow
-      </a>
-    </h3>
-    <br /><br />
-    <h3>
-      <a href="mailto:darren@darrengreenfield.com" target="_blank" rel="noopener noreferrer">
-        <img id="email-logo" src="images/email-logo.png" alt="Email logo" />
-        darren@darrengreenfield.com
-      </a>
-    </h3>
+  <div class="flex-grid" id="right-place-content">
+    <div class="col">
+      <ul>
+        <li><b>A full-stack developer in the Bay Area</b></li>
+        <li>A couple of years coding experience</li>
+        <li><b>JavaScript, React, Node,</b> Express, Jest, SQL and NOSQL experience</li>
+        <li>Firebase, Docker, Google Cloud, Kubernetes experience</li>
+        <li><b>A hard-working self-starter, proven in fast-paced tech companies</b></li>
+        <li>A quick learner</li>
+        <li><b>More than just coding skills</b></li>
+        <li>Someone passionate about coding and the success of your business</li>
+        <li>Ready to start immediately</li>
+      </ul>
+    </div>
+    <div class="col">
+      Image
+    </div>
+  </div>
+  <div class="flex-grid" id="wrong-place-title">
+    <div class="col">
+      <h3>You may be in the wrong place if you're looking for:</h3>
+    </div>
+  </div>
+  <div class="flex-grid" id="wrong-place-content">
+    <div class="col">
+      Image
+    </div>
+    <div class="col">
+      <ul>
+        <li>A senior engineer</li>
+        <li>Someone to focus on a small, well-defined area</li>
+        <li>Someone who will need to be micro-managed</li>
+        <li>Someone who wants a ‘comfortable’ job</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex-grid" id="profile-title">
+    <div class="col">
+      <h3>I'm looking to join a Bay Area start-up as a developer</h3>
+    </div>
+  </div>
+  <div class="flex-grid" id="profile-content-1">
+    <div class="col">
+      <p>
+        <b>A couple of years ago I started spending every free hour coding.</b> After years working
+        in analytics in companies like Google and Accenture, I wanted to reignite my childhood
+        passion for programming.
+      </p>
+      <p>
+        My learning journey started with <b>online courses</b>, but quickly progressed to hands-on
+        learning; <b>working on my own full apps</b> (see below). I coupled this with
+        <b>study of must have knowledge</b> e.g. testing, system design, data structures and
+        algorithms.
+      </p>
+      <p>
+        Most recently I have been <b>working with a talented start-up founder</b> on a side-project
+        called Today I Learned. It’s a web and iOS app where you can record your private daily
+        learnings or share them with others. Through this I’ve
+        <b>gained valuable experience</b> working and iterating on a production app with others;
+        getting a handle on git, coding best practices, design and the start-up way of doing things.
+      </p>
+      <p>
+        I recently left Google and am now
+        <b>looking to join a fast-paced, small start-up in the Bay Area</b> as a full-time
+        developer.
+      </p>
+    </div>
+    <div class="col">
+      <img id="portrait-pic" src="./images/portrait.jpg" alt="A picture of me" />
+    </div>
+  </div>
+  <div class="flex-grid" id="logos">
+    <div class="col"><img id="google-logo" alt="google logo" src="./images/google-logo.png" /></div>
+    <div class="col">
+      <img id="accenture-logo" alt="accenture logo" src="./images/accenture-logo.jpg" />
+    </div>
   </div>
 </main>
 
@@ -235,22 +172,18 @@
       hamburger.doToggle(e);
     });
   })();
-  (function () {
+  (function() {
+    var parallax = document.querySelectorAll('body'),
+      speed = 0.05;
 
-      var parallax = document.querySelectorAll("body"),
-        speed = 0.05;
+    window.onscroll = function() {
+      [].slice.call(parallax).forEach(function(el, i) {
+        var windowYOffset = window.pageYOffset,
+          elBackgrounPos = '50% ' + windowYOffset * speed + 'px';
 
-      window.onscroll = function () {
-        [].slice.call(parallax).forEach(function (el, i) {
-
-          var windowYOffset = window.pageYOffset,
-            elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-          el.style.backgroundPosition = elBackgrounPos;
-
-        });
-      };
-
-    })();
+        el.style.backgroundPosition = elBackgrounPos;
+      });
+    };
+  })();
 </script>
 <script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>

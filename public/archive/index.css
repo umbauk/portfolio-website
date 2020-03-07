@@ -1,0 +1,448 @@
+#header {
+  top: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(177, 177, 177);
+  height: 100%;
+  background-color: #121212;
+  background-image: url('images/background_shapes.jpeg');
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 70;
+  font-family: Oswald;
+  color: #ffffff;
+  opacity: 0.87;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-family: Oswald;
+  color: #ffffff;
+  opacity: 0.87;
+}
+
+/********** Hamburger menu CSS ************/
+
+.nav {
+  background: #121212;
+  font-size: 1.5rem;
+  height: 5%;
+  padding: 0rem 2rem 2rem 2rem;
+  position: fixed;
+  top: -10rem;
+  left: 7rem;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-item {
+  position: fixed;
+  top: -10rem;
+  transition: top 0.5s ease;
+}
+
+#welcome-nav {
+  transition: top 0.5s ease;
+}
+
+#about-nav {
+  left: 7rem;
+  transition: top 0.6s ease;
+}
+
+#projects-nav {
+  left: 14rem;
+  transition: top 0.7s ease;
+}
+
+#blog-nav {
+  left: 22rem;
+  transition: top 0.8s ease;
+}
+
+#contact-nav {
+  left: 28rem;
+  transition: top 0.9s ease;
+}
+
+#welcome-nav.expanded,
+#about-nav.expanded,
+#projects-nav.expanded,
+#blog-nav.expanded,
+#contact-nav.expanded {
+  top: 0rem;
+}
+
+.nav.expanded {
+  top: 0rem;
+}
+
+.nav ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #03dac5;
+  text-decoration: none;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-right: 2rem;
+}
+
+nav ul li a:hover {
+  opacity: 0.38;
+}
+
+.nav-toggle {
+  user-select: none;
+  cursor: pointer;
+  height: 2rem;
+  left: 2rem;
+  position: fixed;
+  top: 2rem;
+  width: 3.6rem;
+  z-index: 1;
+}
+
+.nav-toggle:hover {
+  opacity: 0.8;
+}
+
+.nav-toggle .nav-toggle-bar,
+.nav-toggle .nav-toggle-bar::after,
+.nav-toggle .nav-toggle-bar::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+  background: rgba(255, 255, 255, 0.87);
+  content: '';
+  height: 0.4rem;
+  width: 100%;
+}
+
+.nav-toggle .nav-toggle-bar {
+  margin-top: 0;
+}
+
+.nav-toggle .nav-toggle-bar::after {
+  margin-top: 0.8rem;
+}
+
+.nav-toggle .nav-toggle-bar::before {
+  margin-top: -0.8rem;
+}
+
+.nav-toggle.expanded .nav-toggle-bar {
+  background: transparent;
+}
+
+.nav-toggle.expanded .nav-toggle-bar::after,
+.nav-toggle.expanded .nav-toggle-bar::before {
+  background: rgba(255, 255, 255, 0.87);
+  margin-top: 0;
+}
+
+.nav-toggle.expanded .nav-toggle-bar::after {
+  transform: rotate(45deg);
+}
+
+.nav-toggle.expanded .nav-toggle-bar::before {
+  transform: rotate(-45deg);
+}
+
+/********* End Hamburger menu CSS ***********/
+
+.container {
+  text-align: center;
+}
+
+.welcome-section {
+  top: 0;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.1);
+  padding-top: 40vh;
+  display: inline-block;
+  margin: auto;
+}
+
+.hi {
+  color: #03dac5;
+  opacity: 0.8;
+  text-align: left;
+}
+
+.welcome-section p {
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.about {
+  background-color: rgba(18, 18, 18, 0.1);
+  padding-top: 20px;
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+.about-box-bg {
+  width: 60%;
+  background-color: rgba(18, 18, 18, 1);
+  display: inline-block;
+}
+
+.about-box {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.04);
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+.skills-table {
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.skills-table td {
+  padding: 0.5rem;
+}
+
+.skills-table #beginner {
+  padding-left: 0;
+  transform: translateX(-1rem);
+}
+
+.skills-table #expert {
+  padding-left: 0;
+}
+
+.skills-table tbody td {
+  text-align: right;
+}
+
+.bar-chart {
+  background-color: #03dac5;
+  width: 100px;
+  height: 1.2rem;
+}
+
+#javascript {
+  width: 8rem;
+}
+#react {
+  width: 6rem;
+}
+#node {
+  width: 6rem;
+}
+#mongodb {
+  width: 5rem;
+}
+#html {
+  width: 7rem;
+}
+#css {
+  width: 6rem;
+}
+
+#profile-pic {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.projects {
+  height: 900px;
+  background-color: rgba(18, 18, 18, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6rem 300px 300px;
+  grid-template-areas:
+    'header header'
+    'project1 project2'
+    'project3 project4';
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-margin: 5%;
+  grid-gap: 5%;
+}
+
+.projects a {
+  text-decoration: none;
+}
+
+.project-tile {
+  grid-area: header;
+}
+
+.project-text {
+  background-color: rgb(43, 43, 43);
+  padding: 5%;
+  padding-top: 0%;
+  z-index: 5;
+  position: absolute;
+  width: auto;
+  top: 100%;
+  left: 0;
+  transform: translateY(-3.5rem);
+  transition: all 0.5s ease;
+}
+
+.project-text a {
+  color: white;
+  text-decoration: underline;
+  opacity: 0.87;
+}
+
+.project-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background: #121212;
+  overflow: hidden;
+}
+
+.project-box:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.project-box:hover::before {
+  opacity: 0.6;
+}
+
+.project-box:hover .project-text {
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+}
+
+.project1 {
+  grid-area: project1;
+}
+
+.project1:before {
+  background-image: url('images/cafeandkids.jpg');
+}
+
+.project2 {
+  grid-area: project2;
+}
+
+.project2:before {
+  background-image: url('images/housepricemap.jpg');
+}
+
+.project3 {
+  grid-area: project3;
+}
+
+.project3:before {
+  background-image: url('images/breakout-clone.png');
+}
+
+.project4 {
+  grid-area: project4;
+}
+
+.project4:before {
+  background-image: url('images/calculator.png');
+}
+
+.blog {
+  height: auto;
+  background-color: rgba(18, 18, 18, 0.1);
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 10rem;
+  grid-gap: 5%;
+  margin-top: 10rem;
+}
+
+.blog a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+#blog-title {
+  padding-bottom: 3rem;
+}
+
+.col-sm-4 {
+  background-color: rgb(43, 43, 43);
+}
+
+.contact {
+  height: 100vh;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.contact a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+}
+
+.contact #github-logo {
+  height: 3rem;
+  transform: translateY(0.6rem);
+}
+
+.contact #stack-overflow-logo {
+  height: 2.5rem;
+  transform: translateY(0.4rem);
+}
+
+.contact #email-logo {
+  height: 2.5rem;
+  transform: translateY(0.6rem);
+}
+
+@media only screen and (max-width: 500px) {
+  .projects {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
