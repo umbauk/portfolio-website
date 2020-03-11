@@ -44,14 +44,6 @@ h3 {
   flex: 1;
 }
 
-.flex-grid-thirds {
-  display: flex;
-  justify-content: space-between;
-}
-.flex-grid-thirds .col {
-  width: 32%;
-}
-
 ul li {
   padding-top: 1rem;
 }
@@ -71,9 +63,16 @@ ul li {
 
 #welcome-section {
   text-align: center;
-  margin-top: 5rem;
+  height: 100vh;
+  display: table;
 }
-#subtitle {
+
+#welcome-text {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.subtitle {
   color: #495456;
 }
 
@@ -86,6 +85,33 @@ ul li {
   margin-top: 5rem;
 }
 
+#js-logo-container {
+  text-align: left;
+  margin: 2.5rem 0 0 5rem;
+}
+
+#js-logo {
+  max-width: 100%;
+}
+
+#react-logo-container {
+  text-align: right;
+  margin: 2rem 0 0 0;
+}
+
+#react-logo {
+  max-width: 100%;
+}
+
+#node-logo-container {
+  text-align: left;
+  margin: 2rem 0 0 5rem;
+}
+
+#node-logo {
+  max-width: 100%;
+}
+
 #wrong-place-title {
   text-align: right;
   margin-top: 5rem;
@@ -96,8 +122,9 @@ ul li {
 }
 
 #portrait-pic {
-  height: 25rem;
-  padding-left: 7rem;
+  /* height: 25rem; */
+  max-width: 100%;
+  padding: 1.5rem 0 0 7rem;
   border-radius: 50%;
 }
 
@@ -130,7 +157,6 @@ ul li {
     'project3 project4';
   padding-left: 15%;
   padding-right: 15%;
-  padding-margin: 5%;
   grid-gap: 5%;
 }
 
@@ -203,7 +229,8 @@ ul li {
 }
 
 .project1:before {
-  background-image: url('images/til-screenshot.png');
+  background-image: url('images/til-screenshot.jpg');
+  background-size: contain;
 }
 
 .project2 {
@@ -211,7 +238,8 @@ ul li {
 }
 
 .project2:before {
-  background-image: url('images/housepricemap.jpg');
+  background-image: url('images/housepricemap_new.jpg');
+  background-size: contain;
 }
 
 .project3 {
@@ -220,6 +248,7 @@ ul li {
 
 .project3:before {
   background-image: url('images/cafeandkids.jpg');
+  background-size: contain;
 }
 
 .project4 {
@@ -228,6 +257,7 @@ ul li {
 
 .project4:before {
   background-image: url('images/breakout-clone.png');
+  background-size: contain;
 }
 
 .contact #github-logo {
