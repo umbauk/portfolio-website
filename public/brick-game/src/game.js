@@ -1,12 +1,3 @@
-// TODO
-// [x] new level
-// [x] side collision
-// [x] lives tracker
-// [x] score tracker
-// [x] random level generator
-// [] add option to play again on game over screen
-// [] high score table (need database / back-end?)
-
 import Paddle from './paddle.js';
 import Ball from './ball.js';
 import InputHandler from './input.js';
@@ -75,7 +66,7 @@ export default class Game {
       );
     } else {
       context.textAlign = 'left';
-      context.fillStyle = 'white';
+      context.fillStyle = 'black';
       context.font = '20px Arial';
       context.fillText(`Lives: ${this.lives}`, this.gameWidth - 80, 30);
       context.fillText(`Score: ${this.score}`, 10, 30);

@@ -17,12 +17,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
 
 h1 {
-  font-size: 70;
+  font-size: 4rem;
   font-family: Oswald;
   color: #181d27;
   text-align: center;
@@ -36,8 +36,27 @@ h3 {
   color: #495456;
 }
 
+@media only screen and (max-width: 500px) {
+  .projects {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .flex-grid {
+    display: block;
+  }
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.pop {
+  color: #ff5e01;
+}
+
 .flex-grid {
   display: flex;
+  width: 100%;
 }
 
 .col {
@@ -53,6 +72,17 @@ ul li {
   padding: 5rem;
 }
 
+.table {
+  display: flex;
+  flex-direction: column; /* vertical alignment of flex items */
+  justify-content: center; /* center flex items vertically */
+}
+
+/* .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+} */
+
 @media (max-width: 400px) {
   .flex-grid {
     display: block;
@@ -64,12 +94,6 @@ ul li {
 #welcome-section {
   text-align: center;
   height: 100vh;
-  display: table;
-}
-
-#welcome-text {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .subtitle {
@@ -77,7 +101,7 @@ ul li {
 }
 
 #intro {
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
   text-align: center;
 }
 
@@ -87,7 +111,7 @@ ul li {
 
 #js-logo-container {
   text-align: left;
-  margin: 2.5rem 0 0 5rem;
+  margin: 2.5rem 0 0 8rem;
 }
 
 #js-logo {
@@ -105,7 +129,7 @@ ul li {
 
 #node-logo-container {
   text-align: left;
-  margin: 2rem 0 0 5rem;
+  margin: 2rem 0 0 6.5rem;
 }
 
 #node-logo {
@@ -117,20 +141,25 @@ ul li {
   margin-top: 5rem;
 }
 
+#sad-face {
+  text-align: center;
+  font-size: 200;
+}
+
 #profile-title {
   margin-top: 5rem;
 }
 
 #portrait-pic {
-  /* height: 25rem; */
+  width: 250px;
   max-width: 100%;
-  padding: 1.5rem 0 0 7rem;
+  padding: 0 0 0 7rem;
   border-radius: 50%;
 }
 
 #logos {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 #google-logo {
@@ -147,16 +176,16 @@ ul li {
 }
 
 .projects {
-  height: 900px;
+  /* height: 900px; */
   background-color: rgba(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px 300px;
+  grid-template-rows: 400px 400px;
   grid-template-areas:
     'project1 project2'
     'project3 project4';
-  padding-left: 15%;
-  padding-right: 15%;
+  /* padding-left: 15%;
+  padding-right: 15%; */
   grid-gap: 5%;
 }
 
@@ -213,6 +242,7 @@ ul li {
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
+  border-radius: 10px;
 }
 
 .project-box:hover::before {
@@ -229,7 +259,7 @@ ul li {
 }
 
 .project1:before {
-  background-image: url('images/til-screenshot.jpg');
+  background-image: url('images/til_sshot.jpg');
   background-size: contain;
 }
 
@@ -238,7 +268,7 @@ ul li {
 }
 
 .project2:before {
-  background-image: url('images/housepricemap_new.jpg');
+  background-image: url('images/hpm_sshot.jpg');
   background-size: contain;
 }
 
@@ -256,7 +286,7 @@ ul li {
 }
 
 .project4:before {
-  background-image: url('images/breakout-clone.png');
+  background-image: url('images/breakout_sshot.jpg');
   background-size: contain;
 }
 
@@ -273,13 +303,6 @@ ul li {
 .contact #email-logo {
   height: 2.5rem;
   transform: translateY(0.6rem);
-}
-
-@media only screen and (max-width: 500px) {
-  .projects {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
 }
 
 /********** Hamburger menu CSS ************/

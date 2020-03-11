@@ -35,11 +35,11 @@
 </header>
 
 <main>
-  <div id="welcome-section">
-    <div id="welcome-text">
+  <div id="welcome-section" class="table">
+    <div id="welcome-text" class="table-cell">
       <div class="subtitle">Hi 👋</div>
       <h1>Looking for a developer to join your start-up?</h1>
-      <div class="subtitle">You may be in the right place</div>
+      <div class="pop">You may be in the right place</div>
     </div>
   </div>
 
@@ -47,15 +47,16 @@
     <div class="col">
       <p>
         You’ve probably arrived here because
-        <b>you’re looking to hire someone for your start-up</b>. Your dream is to find someone who
-        will take your startup as seriously as you do, will act like an owner, like it’s their
-        startup too. You want a self-starter who learns quickly and will become one of the team
-        almost immediately.
+        <b class="pop">you’re looking to hire someone for your start-up</b>. Your dream is to find
+        someone who will take your startup as seriously as you do, will act like an owner, like it’s
+        their startup too. You want a self-starter who learns quickly and will become one of the
+        team almost immediately.
       </p>
       <p>
         Picking the right person to join your team is hard and when it’s a small team with a high
         performance bar and limited time and resources,
-        <b>it’s critical you find the right person</b>. So let me try to make it easy for you :)
+        <b class="pop">it’s critical you find the right person</b>. So let me try to make it easy
+        for you <span class="pop">:)</span>
       </p>
     </div>
   </div>
@@ -68,13 +69,16 @@
   <div class="flex-grid" id="right-place-content">
     <div class="col">
       <ul>
-        <li><b>A full-stack developer in the Bay Area</b></li>
+        <li><b class="pop">A full-stack developer in the Bay Area</b></li>
         <li>A couple of years coding experience</li>
-        <li><b>JavaScript, React, Node,</b> Express, Jest, SQL and NOSQL experience</li>
+        <li>
+          <b class="pop">JavaScript, React, Node,</b> Express, HTML/CSS, Jest, SQL and NOSQL
+          experience
+        </li>
         <li>Firebase, Docker, Google Cloud, Kubernetes experience</li>
-        <li><b>A hard-working self-starter, proven in fast-paced tech companies</b></li>
+        <li><b class="pop">A hard-working self-starter, proven in fast-paced tech companies</b></li>
         <li>A quick learner</li>
-        <li><b>More than just coding skills</b></li>
+        <li><b class="pop">More than just coding skills</b></li>
         <li>Someone passionate about coding and the success of your business</li>
         <li>Ready to start immediately</li>
       </ul>
@@ -97,8 +101,8 @@
     </div>
   </div>
   <div class="flex-grid" id="wrong-place-content">
-    <div class="col">
-      Image
+    <div id="sad-face" class="col pop">
+      :(
     </div>
     <div class="col">
       <ul>
@@ -117,31 +121,33 @@
   <div class="flex-grid" id="profile-content-1">
     <div class="col">
       <p>
-        <b>A couple of years ago I started spending every free hour coding.</b> After years working
-        in analytics in companies like Google and Accenture, I wanted to reignite my childhood
-        passion for programming.
+        <b class="pop">A couple of years ago I started spending every free hour coding.</b> After
+        years working in analytics in companies like Google and Accenture, I wanted to reignite my
+        childhood passion for programming.
       </p>
       <p>
-        My learning journey started with <b>online courses</b>, but quickly progressed to hands-on
-        learning; <b>working on my own full apps</b> (see below). I coupled this with
-        <b>study of must have knowledge</b> e.g. testing, system design, data structures and
-        algorithms.
+        My learning journey started with online courses, but quickly progressed to hands-on
+        learning; <b class="pop">working on my own full apps</b> (see below). I coupled this with
+        study of must have knowledge e.g. testing, system design, data structures and algorithms.
       </p>
       <p>
-        Most recently I have been <b>working with a talented start-up founder</b> on a side-project
-        called Today I Learned. It’s a web and iOS app where you can record your private daily
-        learnings or share them with others. Through this I’ve
-        <b>gained valuable experience</b> working and iterating on a production app with others;
-        getting a handle on git, coding best practices, design and the start-up way of doing things.
+        Most recently I have been <b class="pop">working with a talented start-up founder</b> on a
+        side-project called Today I Learned. It’s a web and iOS app where you can record your
+        private daily learnings or share them with others. Through this I’ve
+        <b class="pop">gained valuable experience</b> working and iterating on a production app with
+        others; getting a handle on git, coding best practices, design and the start-up way of doing
+        things.
       </p>
       <p>
         I recently left Google and am now
-        <b>looking to join a fast-paced, small start-up in the Bay Area</b> as a full-time
-        developer.
+        <b class="pop">looking to join a fast-paced, small start-up in the Bay Area</b> as a
+        full-time developer.
       </p>
     </div>
-    <div class="col">
+    <div class="col table">
+      <!-- <div class="table-cell"> -->
       <img id="portrait-pic" src="./images/portrait.jpg" alt="A picture of me" />
+      <!-- </div> -->
     </div>
   </div>
   <div class="flex-grid" id="logos">
@@ -160,22 +166,12 @@
         <a href="todayilearned.co" target="_blank" rel="noopener noreferrer">
           <h3>todayilearned.co</h3>
         </a>
-        <br />
         <p>
           A web and
           <a href="https://apps.apple.com/gb/app/todayilearned-co/id1498292940">iOS app</a> to track
           your daily learnings privately. Or share them to receive reflections from others. Uses
           JavaScript and React on the front-end and Node, Firebase and Firestore on the back-end.
           Includes authentication, notifications, weekly email summaries and history tracking.
-        </p>
-        <br />
-        <p>
-          <a
-            href="https://github.com/umbauk/portfolio-website/tree/master/public/calculator"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Source code</a
-          >
         </p>
       </div>
     </div>
@@ -184,13 +180,11 @@
         <a href="https://housepricemap.ie" target="_blank" rel="noopener noreferrer">
           <h3>housepricemap.ie</h3>
         </a>
-        <br />
         <p>
           120k+ historic Dublin property sales overlayed on an interactive map. A single page app
           using HTML, CSS, JavaScript and React on the front end and NodeJS, Mongoose and MongoDB on
           the back end. Live for users at housepricemap.ie
         </p>
-        <br />
         <p>
           <a
             href="https://github.com/umbauk/house-price-map/"
@@ -206,13 +200,11 @@
         <a href="https://cafeandkids.com" target="_blank" rel="noopener noreferrer">
           <h3>cafeandkids.com</h3>
         </a>
-        <br />
         <p>
           An app to help parents find great playgrounds near great coffee shops. A single page,
           front-end only app using HTML, CSS, JavaScript and React. Uses Google Maps API and the
           OpenWeather API. Live for users at cafeandkids.com
         </p>
-        <br />
         <p>
           <a
             href="https://github.com/umbauk/cafe-and-kids/"
@@ -228,12 +220,10 @@
         <a href="brick-game/index.html" target="_blank" rel="noopener noreferrer">
           <h3>Breakout Clone Game</h3>
         </a>
-        <br />
         <p>
           The classic Breakout clone game coded in vanilla JavaScript using object-oriented
           methodology.
         </p>
-        <br />
         <p>
           <a
             href="https://github.com/umbauk/portfolio-website/tree/master/public/brick-game"
