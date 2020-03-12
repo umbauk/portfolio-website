@@ -36,13 +36,13 @@ h3 {
   color: #495456;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .projects {
     padding-left: 5%;
     padding-right: 5%;
   }
   .flex-grid {
-    display: block;
+    flex-direction: column;
   }
   body {
     margin-left: 2rem;
@@ -57,6 +57,9 @@ h3 {
 .flex-grid {
   display: flex;
   width: 100%;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  flex: 200px;
 }
 
 .col {
@@ -82,12 +85,6 @@ ul li {
   display: table-cell;
   vertical-align: middle;
 } */
-
-@media (max-width: 400px) {
-  .flex-grid {
-    display: block;
-  }
-}
 
 /**** Individual Pages ****/
 
