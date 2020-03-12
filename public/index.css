@@ -3,7 +3,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: calc(1em + 0.75vw);
 }
 
 body {
@@ -17,12 +17,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  margin-left: 8rem;
-  margin-right: 8rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: Oswald;
   color: #181d27;
   text-align: center;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: Oswald;
   color: #495456;
 }
