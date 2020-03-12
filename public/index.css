@@ -1,3 +1,17 @@
+/* HSL
+$color1: hsla(226%, 29%, 66%, 1);
+$color2: hsla(210%, 89%, 28%, 1);
+$color3: hsla(22%, 100%, 50%, 1);
+$color4: hsla(31%, 93%, 65%, 1);
+$color5: hsla(260%, 43%, 97%, 1);
+
+/* RGB
+$color1: rgba(144, 156, 194, 1);
+$color2: rgba(8, 72, 135, 1);
+$color3: rgba(255, 94, 1, 1);
+$color4: rgba(249, 171, 85, 1);
+$color5: rgba(247, 245, 251, 1); */
+
 html {
   font-size: calc(1em + 0.65vw);
 }
@@ -9,7 +23,7 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(24, 29, 39);
+  color: rgb(64, 69, 79);
   height: 100%;
 
   background-attachment: fixed;
@@ -54,7 +68,6 @@ img.center {
 .flex-grid {
   display: flex;
   width: 100%;
-  /* flex-direction: row; */
   flex-wrap: wrap;
   flex: 200px;
 }
@@ -263,7 +276,7 @@ ul li {
 }
 
 #project4:before {
-  background-image: url('images/breakout_sshot.jpg');
+  background-image: url('images/breakout_sshot.png');
   background-size: contain;
 }
 
@@ -271,19 +284,38 @@ ul li {
   margin-top: 5rem;
 }
 
+.contact {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 .contact #github-logo {
   height: 3rem;
-  transform: translateY(0.6rem);
+  margin-top: -0.5rem;
 }
 
 .contact #stack-overflow-logo {
   height: 2.5rem;
-  transform: translateY(0.4rem);
 }
 
 .contact #email-logo {
   height: 2.5rem;
-  transform: translateY(0.6rem);
+}
+
+.contact #linkedin-logo {
+  height: 3rem;
+}
+
+#cta {
+  margin-top: 3rem;
+}
+
+#cta #email-logo {
+  height: 2.5rem;
+}
+
+#cta .logo-left {
+  margin: 4.1rem 0 0 1rem;
 }
 
 /********** Hamburger menu CSS ************/
