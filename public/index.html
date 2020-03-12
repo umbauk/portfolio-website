@@ -84,14 +84,20 @@
       </ul>
     </div>
     <div class="col logo-pics">
-      <div id="js-logo-container">
-        <img id="js-logo" src="images/js_logo.png" />
+      <div id="js-logo-container" class="logo-left">
+        <img id="js-logo" class="logo" src="images/js_logo.png" />
       </div>
-      <div id="react-logo-container">
-        <img id="react-logo" src="images/react_logo.png" />
+      <div id="react-logo-container" class="logo-right">
+        <img id="react-logo" class="logo" src="images/react_logo.png" />
       </div>
-      <div id="node-logo-container">
-        <img id="node-logo" src="images/node_logo.png" />
+      <div id="node-logo-container" class="logo-left">
+        <img id="node-logo" class="logo" src="images/node_logo.png" />
+      </div>
+      <div id="mongodb-logo-container" class="logo-right">
+        <img id="mongodb-logo" class="logo" src="images/mongo_logo.png" />
+      </div>
+      <div id="htmlcss-logo-container" class="logo-left">
+        <img id="htmlcss-logo" class="logo" src="images/htmlcss_logo.png" />
       </div>
     </div>
   </div>
@@ -145,15 +151,20 @@
       </p>
     </div>
     <div class="col table">
-      <!-- <div class="table-cell"> -->
       <img id="portrait-pic" src="./images/portrait.jpg" alt="A picture of me" />
-      <!-- </div> -->
     </div>
   </div>
-  <div class="flex-grid" id="logos">
-    <div class="col"><img id="google-logo" alt="google logo" src="./images/google-logo.png" /></div>
+  <div class="flex-grid" id="company-logos-container">
     <div class="col">
-      <img id="accenture-logo" alt="accenture logo" src="./images/accenture-logo.jpg" />
+      <img id="google-logo" class="company-logo" alt="google logo" src="./images/google-logo.png" />
+    </div>
+    <div class="col">
+      <img
+        id="accenture-logo"
+        class="company-logo"
+        alt="accenture logo"
+        src="./images/accenture-logo.jpg"
+      />
     </div>
   </div>
 
@@ -161,8 +172,8 @@
     <div class="col"><h3>My Portfolio</h3></div>
   </div>
   <div class="projects" id="projects">
-    <div class="project1 project-box">
-      <div class="project-text">
+    <div class="project-box shadow" id="project1">
+      <div class="project-text shadow">
         <a href="todayilearned.co" target="_blank" rel="noopener noreferrer">
           <h3>todayilearned.co</h3>
         </a>
@@ -175,8 +186,8 @@
         </p>
       </div>
     </div>
-    <div class="project2 project-box">
-      <div class="project-text">
+    <div class="project-box shadow" id="project2">
+      <div class="project-text shadow">
         <a href="https://housepricemap.ie" target="_blank" rel="noopener noreferrer">
           <h3>housepricemap.ie</h3>
         </a>
@@ -195,8 +206,8 @@
         </p>
       </div>
     </div>
-    <div class="project3 project-box">
-      <div class="project-text">
+    <div class="project-box shadow" id="project3">
+      <div class="project-text shadow">
         <a href="https://cafeandkids.com" target="_blank" rel="noopener noreferrer">
           <h3>cafeandkids.com</h3>
         </a>
@@ -215,8 +226,8 @@
         </p>
       </div>
     </div>
-    <div class="project4 project-box">
-      <div class="project-text">
+    <div class="project-box shadow" id="project4">
+      <div class="project-text shadow">
         <a href="brick-game/index.html" target="_blank" rel="noopener noreferrer">
           <h3>Breakout Clone Game</h3>
         </a>
@@ -234,6 +245,19 @@
         </p>
       </div>
     </div>
+  </div>
+  <div class="flex-grid" id="profile-title">
+    <div class="col">
+      <h3>I'd love to chat!</h3>
+    </div>
+  </div>
+  <div class="flex-grid" id="contact">
+    <div class="col">
+      If you think I might be a fit for your team I’m available to chat or interview now (March
+      2020) and I’m ready and able to start work immediately. Schedule a quick call or coffee by
+      emailing me now.
+    </div>
+    <div class="col contact-pics"></div>
   </div>
 </main>
 

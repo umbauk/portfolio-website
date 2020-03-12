@@ -3,7 +3,7 @@
 }
 
 html {
-  font-size: calc(1em + 0.75vw);
+  font-size: calc(1em + 0.65vw);
 }
 
 body {
@@ -36,22 +36,14 @@ h3 {
   color: #495456;
 }
 
-@media only screen and (max-width: 700px) {
-  .projects {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  .flex-grid {
-    flex-direction: column;
-  }
-  body {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
-
 .pop {
   color: #ff5e01;
+}
+
+.shadow {
+  -moz-box-shadow: 0 0 5px #999;
+  -webkit-box-shadow: 0 0 5px #999;
+  box-shadow: 0 0 5px #999;
 }
 
 .flex-grid {
@@ -106,31 +98,16 @@ ul li {
   margin-top: 5rem;
 }
 
-#js-logo-container {
-  text-align: left;
-  margin: 2.5rem 0 0 8rem;
-}
-
-#js-logo {
+.logo-left {
   max-width: 100%;
+  text-align: left;
+  margin: 1.5rem 0 0 6rem;
 }
 
-#react-logo-container {
+.logo-right {
+  max-width: 100%;
   text-align: right;
-  margin: 2rem 0 0 0;
-}
-
-#react-logo {
-  max-width: 100%;
-}
-
-#node-logo-container {
-  text-align: left;
-  margin: 2rem 0 0 6.5rem;
-}
-
-#node-logo {
-  max-width: 100%;
+  margin: 1.5rem 0 0 0;
 }
 
 #wrong-place-title {
@@ -154,17 +131,13 @@ ul li {
   border-radius: 50%;
 }
 
-#logos {
+#company-logos-container {
   text-align: center;
   margin-top: 3rem;
 }
 
-#google-logo {
-  width: 20vw;
-}
-
-#accenture-logo {
-  width: 20vw;
+.company-logo {
+  max-width: 100%;
 }
 
 #portfolio-title {
@@ -177,7 +150,7 @@ ul li {
   background-color: rgba(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 400px 400px;
+  grid-template-rows: 60vh 60vh;
   grid-template-areas:
     'project1 project2'
     'project3 project4';
@@ -195,9 +168,9 @@ ul li {
 }
 
 .project-text {
-  background-color: rgb(255, 255, 255);
-  padding: 5%;
-  padding-top: 0%;
+  font-size: 0.8rem;
+  background-color: rgb(245, 245, 245);
+  padding: 0% 5% 5% 5%;
   z-index: 5;
   position: absolute;
   width: auto;
@@ -205,6 +178,11 @@ ul li {
   left: 0;
   transform: translateY(-5.5rem);
   transition: all 0.5s ease;
+  border-radius: 10px;
+}
+
+.project-text h3 {
+  margin-top: 1rem;
 }
 
 .project-text a {
@@ -225,6 +203,7 @@ ul li {
   position: relative;
   background: #ffffff;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .project-box:before {
@@ -239,7 +218,6 @@ ul li {
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
-  border-radius: 10px;
 }
 
 .project-box:hover::before {
@@ -251,38 +229,38 @@ ul li {
   transition: all 0.5s ease;
 }
 
-.project1 {
+#project1 {
   grid-area: project1;
 }
 
-.project1:before {
+#project1:before {
   background-image: url('images/til_sshot.jpg');
   background-size: contain;
 }
 
-.project2 {
+#project2 {
   grid-area: project2;
 }
 
-.project2:before {
+#project2:before {
   background-image: url('images/hpm_sshot.jpg');
   background-size: contain;
 }
 
-.project3 {
+#project3 {
   grid-area: project3;
 }
 
-.project3:before {
+#project3:before {
   background-image: url('images/cafeandkids.jpg');
   background-size: contain;
 }
 
-.project4 {
+#project4 {
   grid-area: project4;
 }
 
-.project4:before {
+#project4:before {
   background-image: url('images/breakout_sshot.jpg');
   background-size: contain;
 }
@@ -442,3 +420,29 @@ nav ul li a:hover {
 }
 
 /********* End Hamburger menu CSS ***********/
+
+@media only screen and (max-width: 700px) {
+  .projects {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .flex-grid {
+    flex-direction: column;
+  }
+
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .logo-left {
+    text-align: center;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .logo-right {
+    text-align: center;
+    margin: 1.5rem 0 0 0;
+  }
+}
