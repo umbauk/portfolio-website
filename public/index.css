@@ -1,28 +1,10 @@
-/* HSL
-$color1: hsla(226%, 29%, 66%, 1);
-$color2: hsla(210%, 89%, 28%, 1);
-$color3: hsla(22%, 100%, 50%, 1);
-$color4: hsla(31%, 93%, 65%, 1);
-$color5: hsla(260%, 43%, 97%, 1);
-
-/* RGB
-$color1: rgba(144, 156, 194, 1);
-$color2: rgba(8, 72, 135, 1);
-$color3: rgba(255, 94, 1, 1);
-$color4: rgba(249, 171, 85, 1);
-$color5: rgba(247, 245, 251, 1); */
-
 html {
   font-size: calc(1em + 0.65vw);
 }
 
-#header {
-  top: 0;
-}
-
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: rgb(64, 69, 79);
   height: 100%;
 
@@ -65,7 +47,8 @@ img.center {
   margin: 0 auto;
 }
 
-.flex-grid {
+.flex-grid,
+.flex-grid-responsive {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -76,7 +59,7 @@ img.center {
   flex: 1;
 }
 
-ul li {
+.skills li {
   padding-top: 1rem;
 }
 
@@ -90,11 +73,6 @@ ul li {
   flex-direction: column; /* vertical alignment of flex items */
   justify-content: center; /* center flex items vertically */
 }
-
-/* .table-cell {
-  display: table-cell;
-  vertical-align: middle;
-} */
 
 /**** Individual Pages ****/
 
@@ -142,6 +120,10 @@ ul li {
   margin-top: 5rem;
 }
 
+#profile-content-1 table {
+  display: initial;
+}
+
 #portrait-pic {
   width: 250px;
   max-width: 100%;
@@ -167,10 +149,11 @@ ul li {
   background-color: rgba(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 15rem 15rem;
+  grid-template-rows: 15rem 15rem 15rem;
   grid-template-areas:
-    'project1 project2'
-    'project3 project4';
+    "project1 project2"
+    "project3 project4"
+    "project5 project6";
   grid-gap: 5%;
 }
 
@@ -222,7 +205,7 @@ ul li {
 }
 
 .project-box:before {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   left: 0;
@@ -249,7 +232,7 @@ ul li {
 }
 
 #project1:before {
-  background-image: url('images/til_sshot.jpg');
+  background-image: url("images/til_sshot.jpg");
   background-size: contain;
 }
 
@@ -258,7 +241,7 @@ ul li {
 }
 
 #project2:before {
-  background-image: url('images/hpm_sshot.jpg');
+  background-image: url("images/mailsender_sshot.jpg");
   background-size: contain;
 }
 
@@ -267,7 +250,7 @@ ul li {
 }
 
 #project3:before {
-  background-image: url('images/cafeandkids.jpg');
+  background-image: url("images/hpm_sshot.jpg");
   background-size: contain;
 }
 
@@ -276,12 +259,26 @@ ul li {
 }
 
 #project4:before {
-  background-image: url('images/breakout_sshot.png');
+  background-image: url("images/breakout_sshot.png");
   background-size: contain;
 }
 
+#project5 {
+  grid-area: project5;
+}
+
+#project5:before {
+  background-image: url("images/cafeandkids.jpg");
+  background-size: contain;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 #contact-title {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .contact {
@@ -306,6 +303,10 @@ ul li {
   height: 3rem;
 }
 
+#faq-title {
+  margin-top: 5rem;
+}
+
 #cta {
   margin-top: 3rem;
 }
@@ -315,19 +316,29 @@ ul li {
 }
 
 #cta .logo-left {
-  margin: 4.1rem 0 0 1rem;
+  margin: 4.1rem 0 6rem 1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0 0 2rem 0;
 }
 
 /********** Hamburger menu CSS ************/
 
+#header {
+  top: 0;
+  margin-left: -6rem;
+}
+
 .nav {
-  background: #121212;
-  font-size: 1.5rem;
-  height: 5%;
+  background: rgb(245, 245, 245);
+  font-size: 1rem;
   padding: 0rem 2rem 2rem 2rem;
   position: fixed;
   top: -10rem;
-  left: 7rem;
   width: 100%;
   z-index: 100;
 }
@@ -339,39 +350,47 @@ ul li {
 }
 
 #welcome-nav {
+  margin-left: 3rem;
   transition: top 0.5s ease;
+  margin-top: -1.5rem;
+}
+
+#skills-nav {
+  left: 10rem;
+  transition: top 0.6s ease;
+  margin-top: -1.5rem;
 }
 
 #about-nav {
-  left: 7rem;
-  transition: top 0.6s ease;
+  left: 17rem;
+  transition: top 0.7s ease;
+  margin-top: -1.5rem;
 }
 
 #projects-nav {
-  left: 14rem;
-  transition: top 0.7s ease;
-}
-
-#blog-nav {
-  left: 22rem;
+  left: 24rem;
   transition: top 0.8s ease;
+  margin-top: -1.5rem;
 }
 
 #contact-nav {
-  left: 28rem;
+  left: 32rem;
   transition: top 0.9s ease;
+  margin-top: -1.5rem;
 }
 
 #welcome-nav.expanded,
-#about-nav.expanded,
+#skills-nav.expanded,
 #projects-nav.expanded,
-#blog-nav.expanded,
+#about-nav.expanded,
 #contact-nav.expanded {
   top: 0rem;
 }
 
 .nav.expanded {
   top: 0rem;
+  padding-bottom: 4rem;
+  z-index: 10;
 }
 
 .nav ul {
@@ -385,14 +404,15 @@ ul li {
 
 nav ul li {
   display: inline-block;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 nav ul li a {
-  color: #03dac5;
+  color: rgb(64, 69, 79);
   text-decoration: none;
-  font-size: 1.5rem;
   opacity: 0.8;
   margin-right: 2rem;
+  background-color: rgb(245, 245, 245);
 }
 
 nav ul li a:hover {
@@ -402,12 +422,12 @@ nav ul li a:hover {
 .nav-toggle {
   user-select: none;
   cursor: pointer;
-  height: 2rem;
-  left: 2rem;
+  height: 1rem;
+  left: 1rem;
   position: fixed;
-  top: 2rem;
-  width: 3.6rem;
-  z-index: 1;
+  top: 1.5rem;
+  width: 2.5rem;
+  z-index: 11;
 }
 
 .nav-toggle:hover {
@@ -421,9 +441,9 @@ nav ul li a:hover {
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.5s ease;
-  background: rgba(255, 255, 255, 0.87);
-  content: '';
-  height: 0.4rem;
+  background: #ff5e01;
+  content: "";
+  height: 0.3rem;
   width: 100%;
 }
 
@@ -445,7 +465,7 @@ nav ul li a:hover {
 
 .nav-toggle.expanded .nav-toggle-bar::after,
 .nav-toggle.expanded .nav-toggle-bar::before {
-  background: rgba(255, 255, 255, 0.87);
+  background: #ff5e01;
   margin-top: 0;
 }
 
@@ -465,7 +485,7 @@ nav ul li a:hover {
     padding-right: 5%;
   }
 
-  .flex-grid {
+  .flex-grid-responsive {
     flex-direction: column;
   }
 
@@ -484,26 +504,102 @@ nav ul li a:hover {
     margin: 1.5rem 0 0 0;
   }
 
+  #wrong-place-title {
+    text-align: left;
+  }
+
   #portrait-pic {
     padding: 0;
+    margin-top: 3rem;
   }
 
   .projects {
     grid-template-columns: 1fr;
     grid-template-rows: 15rem 15rem 15rem 15rem;
     grid-template-areas:
-      'project1'
-      'project2'
-      'project3'
-      'project4';
+      "project1"
+      "project2"
+      "project3"
+      "project4";
     gap: 5%;
   }
 
   #contact-title {
-    margin-top: 10rem;
+    margin-top: 13rem;
   }
 
   .mob-center {
     text-align: center;
+  }
+}
+
+/* Hamburger menu  on mobile to come from left side */
+@media only screen and (max-width: 1050px) {
+  .nav {
+    left: -10rem;
+    height: 100%;
+    width: 10%;
+  }
+
+  .nav-item {
+    left: -10rem;
+    transition: left 0.5s ease;
+  }
+
+  #welcome-nav.expanded,
+  #skills-nav.expanded,
+  #projects-nav.expanded,
+  #about-nav.expanded,
+  #contact-nav.expanded {
+    left: calc(1rem + 10vw);
+  }
+
+  #welcome-nav {
+    top: 2rem !important;
+    transition: left 0.5s ease;
+    left: 1.5rem;
+    margin-left: 0rem;
+  }
+
+  #skills-nav {
+    top: 6rem !important;
+    transition: left 0.6s ease;
+    left: 1.5rem;
+  }
+
+  #about-nav {
+    top: 10rem !important;
+    transition: left 0.7s ease;
+    left: 1.5rem;
+  }
+
+  #projects-nav {
+    top: 14rem !important;
+    transition: left 0.8s ease;
+    left: 1.5rem;
+  }
+
+  #contact-nav {
+    top: 18rem !important;
+    transition: left 0.9s ease;
+    left: 1.5rem;
+  }
+
+  .nav.expanded {
+    left: 0rem;
+  }
+
+  .nav ul {
+    top: 10%;
+    left: -50%;
+    transform: translateX(50%);
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    margin-right: 2rem;
   }
 }
