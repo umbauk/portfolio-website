@@ -106,6 +106,10 @@ img.center {
   margin: 1.5rem 0 0 0;
 }
 
+#angular-logo {
+  width: 30%;
+}
+
 #wrong-place-title {
   text-align: right;
   margin-top: 5rem;
