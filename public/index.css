@@ -288,6 +288,7 @@ img.center {
 .contact {
   text-align: center;
   margin-top: 3rem;
+  margin-bottom: 12rem;
 }
 
 .contact #github-logo {
